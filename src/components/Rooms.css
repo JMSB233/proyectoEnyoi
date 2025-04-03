@@ -1,0 +1,92 @@
+.rooms-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;  /* Asegura que los elementos internos se apilen verticalmente */
+    align-items: center;  /* Centra los elementos horizontalmente */
+    gap: 10px;  /* Espaciado uniforme entre elementos */
+}
+
+.room-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contenedor para los botones */
+.button-container {
+    display: flex;
+    flex-direction: column;  /* Alinea los botones en columna */
+    width: 100%;  /* Asegura que los botones ocupen todo el ancho */
+    gap: 10px;  /* Espaciado uniforme entre los botones */
+}
+
+/* Estilo unificado para los botones de descripción y de iniciar sesión */
+.action-btn, .reserve-btn {
+    padding: 10px 15px;
+    width: 100%;  /* Hace que los botones ocupen el ancho del contenedor */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Botón de descripción e iniciar sesión */
+.action-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de reservar */
+.reserve-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reserve-btn:hover {
+    background-color: #218838;
+}
+
+/* Estilos para la descripción */
+.room-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #444;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Estilos para mensajes */
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import LoginPage from "./pages/LoginPage";
+import HomePage from "./components/Home";
+import ReservasPage from "./pages/ReservasPage";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Navbar from "./components/Navbar";
+import Rooms from "./components/Rooms";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setIsAuthenticated(!!token);  // Si hay token, está autenticado
+    }, []);
+
+    return (
+        <Router>
+            <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+            <Routes>
+                <Route path="/" element={<HomePage isAuthenticated={isAuthenticated} />} />
+                <Route path="/home" element={<HomePage isAuthenticated={isAuthenticated} />} />
+                <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/reservas" element={<ReservasPage />} />
+                <Route path="/rooms" element={<Rooms isAuthenticated={isAuthenticated} />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
