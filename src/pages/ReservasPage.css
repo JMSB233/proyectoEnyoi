@@ -1,0 +1,137 @@
+/* Contenedor principal */
+.reserva-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título de reserva */
+.titulo-reserva {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.form-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.label-reserva {
+    font-weight: bold;
+    color: #34495e;
+    text-align: left;
+}
+
+.input-reserva {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botón de reserva */
+.btn-reservar {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #2980b9;
+}
+
+/* Mensaje de confirmación/error */
+.mensaje-reserva {
+    font-size: 16px;
+    font-weight: bold;
+    color: #27ae60;
+    margin-top: 10px;
+}
+
+/* Título del historial */
+.titulo-historial {
+    color: #2c3e50;
+    margin-top: 30px;
+}
+
+/* Historial de reservas */
+.mensaje-historial {
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+.lista-reservas {
+    list-style: none;
+    padding: 0;
+}
+
+.item-reserva {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.item-reserva strong {
+    color: #2980b9;
+}
+
+/* Botón de cancelar reserva */
+.cancel-btn {
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 8px;
+    display: block;
+}
+
+.cancel-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.cancel-btn:active {
+    background-color: #a93226;
+    transform: scale(1);
+}
+
+/* Estilo del círculo de estado */
+.estado-circulo {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Color verde cuando la reserva está activa */
+.activo {
+    background-color: #27ae60;
+}
+
+/* Color rojo cuando la reserva está cancelada */
+.cancelado {
+    background-color: #e74c3c;
+}

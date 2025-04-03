@@ -1,0 +1,58 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a, .logout-btn {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.navbar a:hover, .logout-btn:hover {
+    background: white;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.logout-btn {
+    background: #007bff; /* Rojo más estilizado */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: white; /* Rojo más oscuro en hover */
+    transform: scale(1.05); /* Pequeño efecto de zoom */
+}
+
+.logout-btn:active {
+    transform: scale(0.95); /* Efecto de presión al hacer clic */
+}
